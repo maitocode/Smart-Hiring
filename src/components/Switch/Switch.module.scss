@@ -1,0 +1,64 @@
+@import "../../assets/scss/foundation/variable/variable";
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+
+  input {
+    display: none;
+  }
+
+  span {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    background-color: $color_cross_time;
+    display: inline-block;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      transition: all 0.4s;
+    }
+  }
+
+  input:checked + span::before {
+    background-color: $color_active;
+    box-shadow: 0 0 4px 1px $color_active;
+    transform: translateX(26px);
+  }
+
+  input + span::before {
+    background-color: $color_inactive;
+    box-shadow: 0 0 4px 1px $color_inactive;
+  }
+
+  // .background {
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: $bg_gray;
+  //   border-radius: inherit;
+  //   display: flex;
+
+  //   .button {
+  //     width: 25px;
+  //     height: 25px;
+  //     border-radius: 25px;
+  //     transition: all 0.4s;
+  //   }
+
+  //   .off {
+  //     background-color: red;
+  //     box-shadow: 0 0 2px 1px red;
+  //   }
+  // }
+}

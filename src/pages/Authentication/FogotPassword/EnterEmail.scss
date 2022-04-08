@@ -1,0 +1,63 @@
+@import "../../../assets/scss/app.scss";
+$main-color: #DF7112;
+.fogot-password-wrapper {
+  display: flex;
+  height: 100%;
+  .fogot-back-btn {
+    background-image: url("../../../assets/images/icons/back-image.svg");
+    min-width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    cursor: pointer;
+  }
+  .fogot-main {
+    margin-left: 50px;
+    position: relative;
+    width: 100%;
+    .fogot-reset-title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 48px;
+      color: #000000;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+    .fogot-form-email {
+      position: absolute;
+      bottom: 50px;
+      .fogot-form-group {
+        margin-bottom: 30px;
+        .fogot-text-form-fogot {
+          line-height: 22,4px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #3C3737;
+        }
+        .fogot-email-fogot {
+          padding: 0 10px;
+          width: 100%;
+          margin-top: 10px;
+          border: 1px solid #757272;
+          height: 40px;
+        }
+        .errors {
+          color: #ff1f00;
+          font-size: 12px;
+          margin: 4px 0 0 0;
+        }
+      }
+      .fogot-btn-submit {
+        width: 100%;
+        border-radius: 2px;
+        height: 40px;
+        line-height: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        border: solid $main-color;
+        background-color: $main-color;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
