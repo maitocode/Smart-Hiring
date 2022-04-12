@@ -11,9 +11,8 @@ import { useTranslation } from "react-i18next";
 import "plugins/react-i18n.js";
 import Toast from "components/Toast";
 import { routeConfig, RouteWithSubRoutes } from "router/config";
-
-import Login from "pages/Authentication/Login/Login";
 import Error from "pages/Error/Error";
+import HomePage from "./pages/User/HomePage/HomePage";
 
 function App() {
   const { i18n } = useTranslation();
@@ -31,7 +30,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/not-found" component={Error} />
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={HomePage} />
           {routeConfig.map((route, i) => (
             <RouteWithSubRoutes key={i} {...route} />
           ))}
