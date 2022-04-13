@@ -8,7 +8,6 @@ import HomePageBottom from "./HomePageBottom/HomePageBottom.jsx";
 function HomePage() {
   return (
     <div>
-      hihi
       <HomePageHeader />
       <HomePageHiring />
       <HomePageBenefits />
