@@ -1,52 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { AppBar } from "@mui/material";
 import "./HomePageHeader.scss";
+import SearchBar from "material-ui-search-bar";
+
 function HomePageHeader() {
+  const [searchValue, setSearchValue] = useState("");
+
+  const doSomethingWith = (value) => {
+    console.log(value);
+  };
   return (
-    <section id="header">
-      <div className="header container">
-        <div className="nav-bar">
-          <div className="brand">
-            <a href="#" id="hero">
-              <h2>
-                <span>S</span>haif <span>A</span>rfan
-              </h2>
-            </a>
-          </div>
-          <div className="nav-list">
-            <div className="hamburger">
-              <div className="bar"></div>
-            </div>
-            <ul>
-              <li>
-                <a href="#" data-after="Home">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#services" data-after="Services">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#projects" data-after="Projects">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#about" data-after="About">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#contact" data-after="Contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="header-bar">
+      <SearchBar
+        className="header-bar-search"
+        value={searchValue}
+        onChange={(newValue) => setSearchValue(newValue)}
+        onRequestSearch={() => doSomethingWith(this.state.value)}
+      />
+    </div>
   );
 }
 
