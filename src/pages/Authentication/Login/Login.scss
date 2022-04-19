@@ -1,4 +1,4 @@
-@import "../../../assets/scss/app.scss";
+
 
 .login-wrapper {
   .login {
@@ -31,7 +31,7 @@
           // margin-top: 3px;
           font-size: 24px;
           font-weight: 400;
-          color: $bg_gray_text;
+          // color: $bg_gray_text;
         }
         > input {
           height: 16px;
@@ -39,7 +39,7 @@
           appearance: none;
           border-radius: 4px;
           outline: none;
-          background-color: $color_orange !important;
+          // background-color: $color_orange !important;
           cursor: pointer;
           margin-right: 8px;
         }
@@ -71,7 +71,7 @@
           text-decoration: none;
           font-size: 14px;
           font-weight: 400;
-          color: $color_blue;
+          // color: $color_blue;
         }
         .forgot-password:hover {
           opacity: 0.5;
@@ -87,7 +87,7 @@
         > input {
           border: none;
           padding: 6px 16px;
-          background-color: $bg_gray_input;
+          // background-color: $bg_gray_input;
         }
 
         .login-form-group-remember {
@@ -101,7 +101,7 @@
             // padding-top: 3px;
             font-size: 14px;
             font-weight: 400;
-            color: $bg_gray_text;
+            // color: $bg_gray_text;
           }
         }
         .remeber-mark:hover {
@@ -119,10 +119,10 @@
           left: 0;
           height: 16px;
           width: 16px;
-          background-color: $color_blue;
+          // background-color: $color_blue;
         }
         .login-form-group-remember input:checked ~ .remeber-mark {
-          background-color: $color_blue;
+          // background-color: $color_blue;
           border-radius: 4px;
         }
 
@@ -153,11 +153,11 @@
         &-btn {
           padding: 8px 0;
           width: 100%;
-          background: $color_button_submit;
+          // background: $color_button_submit;
           font-size: 14px;
           font-weight: 400;
           text-transform: uppercase;
-          color: $color_white;
+          // color: $color_white;
           border: none;
           border-radius: 4px;
         }
@@ -182,13 +182,13 @@
     p {
       font-size: 14px;
       font-weight: 400;
-      color: $bg_gray_text;
+      // color: $bg_gray_text;
     }
     &-link {
       font-size: 14px;
       font-weight: 600;
       text-decoration: none !important;
-      color: $color_blue !important;
+      // color: $color_blue !important;
       margin-left: 5px;
     }
   }
@@ -208,7 +208,7 @@
     opacity: 0.5;
   }
   .errors {
-    color: $color_error;
+    // color: $color_error;
     font-size: 12px;
     margin: 4px 0 0 0;
   }

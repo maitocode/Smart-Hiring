@@ -1,0 +1,69 @@
+@import '/src/assets/scss/index.scss';
+
+$logo_distance: 20%;
+$search_distance: 40%;
+$quickAccess_distance: 30%;
+$auth_distance: 10%;
+
+.header {
+    width: 100vw;
+    display: flex;
+    height: 70px;
+    position: static;
+    background-color: white;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgba(31, .0, 30, 0.24);
+    transition: .5s ease;
+
+    &-logo {
+        width: $logo_distance;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        img {
+            width: 50%;
+            height: auto; 
+        }
+    }
+
+    &-search {
+        width: $search_distance;
+    }
+
+    &-quick-access {
+        display: flex;
+        width: $quickAccess_distance;
+        height: 100%;
+        align-items: center;
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            list-style: none;
+            transition: .5s ease left;
+            padding: 0;
+
+            li {
+                a {
+                    font-size: 12px;
+	                font-weight: 700;
+	                letter-spacing: .2rem;
+	                text-decoration: none;
+                    color: black;
+                    text-transform: uppercase;
+                }
+
+                a:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &-auth {
+        width: $auth_distance;
+        background-color: green;
+        height: 100%;
+    }
+}

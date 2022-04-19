@@ -5,10 +5,7 @@ import { useSelector } from "react-redux";
 import Login from "pages/Authentication/Login/Login";
 import SignUp from "pages/Authentication/SignUp/SignUp";
 import Error from "pages/Error/Error.js";
-import VerifyEmail from "pages/Authentication/VerifyEmail/VerifyEmail";
-import EnterEmail from "pages/Authentication/FogotPassword/EnterEmail";
-import VerifyDigitalCode from "pages/Authentication/FogotPassword/VerifyDigitalCode";
-import UpdatePassWord from "pages/Authentication/FogotPassword/UpdatePassWord";
+
 import { USER_ROLE } from "core/constants";
 
 export const routeConfig = [
@@ -18,36 +15,36 @@ export const routeConfig = [
     exact: true,
     component: SignUp
   },
-  {
-    path: "/verify-email",
-    isPrivate: false,
-    exact: false,
-    component: VerifyEmail
-  },
+  // {
+  //   path: "/verify-email",
+  //   isPrivate: false,
+  //   exact: false,
+  //   component: VerifyEmail
+  // },
   {
     path: "/login",
     isPrivate: false,
     exact: true,
     component: Login
   },
-  {
-    path: "/fogot-password-enter-email",
-    isPrivate: false,
-    exact: true,
-    component: EnterEmail
-  },
-  {
-    path: "/fogot-password-verify-code",
-    isPrivate: false,
-    exact: true,
-    component: VerifyDigitalCode
-  },
-  {
-    path: "/fogot-password-update-password",
-    isPrivate: false,
-    exact: true,
-    component: UpdatePassWord
-  },
+  // {
+  //   path: "/fogot-password-enter-email",
+  //   isPrivate: false,
+  //   exact: true,
+  //   component: EnterEmail
+  // },
+  // {
+  //   path: "/fogot-password-verify-code",
+  //   isPrivate: false,
+  //   exact: true,
+  //   component: VerifyDigitalCode
+  // },
+  // {
+  //   path: "/fogot-password-update-password",
+  //   isPrivate: false,
+  //   exact: true,
+  //   component: UpdatePassWord
+  // },
   { path: "*", component: Error }
 ];
 

@@ -4,19 +4,6 @@
 // vendor
 // ==========================================================================
 
-// @import "vendor/testjs/test.css";
-
-// ==========================================================================
-// Foundation
-// ==========================================================================
-
-@import 'foundation/variable/_variable';
-@import "foundation/variable/_font";
-@import 'foundation/mixin/_responsive.scss';
-@import 'foundation/mixin/_mixins.scss';
-@import 'foundation/base/_reset';
-@import 'foundation/base/_base';
-
 // ==========================================================================
 // Layout
 $mainColor1: #234A4D;
@@ -25,8 +12,3 @@ $mainColor3: #FFFAD4;
 $mainColor4: #6F333D;
 // ==========================================================================
 
-@import 'layout/_layout';
-
-// -----------------------------------------------------------------
-// Utility
-// -----------------------------------------------------------------

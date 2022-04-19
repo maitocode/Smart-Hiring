@@ -1,14 +1,16 @@
 import React from "react";
-import HomePageHeader from "./HomePageHeader/HomePageHeader";
+import UserHeader from "./UserHeader/UserHeader";
 import HomePageHiring from "./HomePageHiring/HomePageHiring";
 import HomePageBenefits from "./HomePageBenefits/HomePageBenefits";
 import HomePageAboutUs from "./HomePageAboutUs/HomePageAboutUs";
 import HomePageBottom from "./HomePageBottom/HomePageBottom.jsx";
+import HomePageBanner from "./HomaPageBanner/HomePageBanner";
 
 function HomePage() {
   return (
     <div>
-      <HomePageHeader />
+      <UserHeader />
+      <HomePageBanner />
       <HomePageHiring />
       <HomePageBenefits />
       <HomePageAboutUs />

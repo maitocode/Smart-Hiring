@@ -1,11 +1,11 @@
-@import "../../../assets/scss/app.scss";
+
 
 .signup-wrapper {
   // margin-top: -30px;
   .signup-title {
     font-weight: 600;
     font-size: 30px;
-    color: $color_text;
+    // color: $color_text;
   }
   .card-wrapper {
     // width: 38vw;
@@ -69,14 +69,14 @@
     text-align: center;
   }
   input[type="radio"]:checked {
-    border: 1px solid $color_blue;
+    // border: 1px solid $color_blue;
   }
   input[type="radio"]:checked::after {
     content: "\2713";
     height: 20px;
     width: 20px;
-    background: $color_blue;
-    color: $color_white;
+    // background: $color_blue;
+    // color: $color_white;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@
   input[type="password"],
   input[type="email"] {
     font-size: 14px;
-    background-color: $bg_gray_input;
+    // background-color: $bg_gray_input;
     border-radius: 2px;
     border: none;
   }
@@ -119,16 +119,16 @@
     margin-bottom: 0;
   }
   button[type="submit"] {
-    background: $color_button_submit;
+    // background: $color_button_submit;
     border-radius: 8px;
-    color: $color_white;
+    // color: $color_white;
     font-style: normal;
     font-size: 13px;
     border: solid;
     padding: 8px 0;
   }
   button[type="submit"]:hover {
-    color: $color_white;
+    // color: $color_white;
     opacity: 0.5;
   }
   .text-muted-2,
@@ -139,7 +139,7 @@
   }
   .text-muted-1 {
     span {
-      color: $color_blue;
+      // color: $color_blue;
       font-weight: bold;
     }
   }
@@ -148,7 +148,7 @@
     margin-left: 15%;
     margin-top: 37px;
     a {
-      color: $color_blue;
+      // color: $color_blue;
       font-weight: bold;
     }
   }
@@ -162,7 +162,7 @@
     outline: 0 none;
   }
   .errors {
-    color: $color_error;
+    // color: $color_error;
     font-size: 12px;
     margin: 4px 0 0 0;
   }
@@ -175,7 +175,7 @@
   }
   .input-group-text {
     width: 40px;
-    background-color: $bg_gray_input;
+    // background-color: $bg_gray_input;
     font-size: 12px;
     height: 100%;
   }

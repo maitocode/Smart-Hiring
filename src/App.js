@@ -9,7 +9,7 @@ import {
 } from "core/localStore";
 import { useTranslation } from "react-i18next";
 import "plugins/react-i18n.js";
-import Toast from "components/Toast";
+// import Toast from "components/Toast";
 import { routeConfig, RouteWithSubRoutes } from "router/config";
 import Error from "pages/Error/Error";
 import HomePage from "./pages/User/HomePage/HomePage";
@@ -36,7 +36,7 @@ function App() {
           ))}
         </Switch>
       </BrowserRouter>
-      <Toast />
+      {/* <Toast /> */}
     </div>
   );
 }
