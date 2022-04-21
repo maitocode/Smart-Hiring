@@ -1,8 +1,24 @@
 
 .banner {
-    background-image: url("./banner.jpeg");
-	background-size: cover;
-	background-position: top center;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+    // background-image: url("./banner.jpeg");
+	// background-size: cover;
+	// background-position: top center;
 	position: relative;
-	z-index: 1;
+	z-index: -1;
+
+
+	// &::after {
+	// 	height: 100%;
+	// 	width: 100%;
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	background-color: black;
+	// 	opacity: .2;
+	// 	z-index: -1;
+	// }
 }

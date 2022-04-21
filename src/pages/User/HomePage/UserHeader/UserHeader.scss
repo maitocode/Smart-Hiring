@@ -9,12 +9,13 @@ $auth_distance: 10%;
     width: 100vw;
     display: flex;
     height: 70px;
-    position: static;
+    position: fixed;
     background-color: white;
     align-items: center;
     min-height: 8vh;
     background-color: rgba(31, .0, 30, 0.24);
     transition: .5s ease;
+    z-index: 1;
 
     &-logo {
         width: $logo_distance;
@@ -50,7 +51,7 @@ $auth_distance: 10%;
 	                font-weight: 700;
 	                letter-spacing: .2rem;
 	                text-decoration: none;
-                    color: black;
+                    color: white;
                     text-transform: uppercase;
                 }
 
