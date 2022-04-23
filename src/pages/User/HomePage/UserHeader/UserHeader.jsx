@@ -13,7 +13,7 @@ function UserHeader() {
     console.log(value);
   };
   return (
-    <div className="header">
+    <section className="header">
       <div className="header-logo">
         <img src={Logo} alt="" />
       </div>
@@ -47,7 +47,7 @@ function UserHeader() {
           <AppRegistrationIcon />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
