@@ -6,6 +6,7 @@ import Img1 from "../../../../assets/images/slider1.jpeg";
 import Img2 from "../../../../assets/images/slider2.jpg";
 import Img3 from "../../../../assets/images/slider3.jpeg";
 import Img4 from "../../../../assets/images/slider4.jpg";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
 
 function HomePageBanner(props) {
   var items = [
@@ -22,7 +23,7 @@ function HomePageBanner(props) {
     {
       name: "Random Name #1",
       description: "Probably the most random thing you have ever seen!",
-      img: Img1
+      img: Img3
     }
   ];
 
@@ -36,19 +37,12 @@ function HomePageBanner(props) {
   return (
     <div className="banner">
       <Carousel
-        fullHeightHover={false}
         index={carouselIndex}
+        autoPlay={true}
         navButtonsAlwaysVisible={true}
-        NavButton={({ handlePrev, className, style, next, prev }) => {
-          // Other logic
-
-          return (
-            <Button onClick={handlePrev} className={className} style={style}>
-              {next && "Next"}
-              {prev && "Previous"}
-            </Button>
-          );
-        }}
+        animation="fade"
+        cycleNavigation={true}
+        stopAutoPlayOnHover={true}
       >
         {items.map((item, i) => (
           <Item key={i} item={item} />
