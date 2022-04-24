@@ -4,13 +4,17 @@
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	z-index: 1;
+	// z-index: 1;
 	
-	img{
-		position: relative;
-		height: 100vh;
-	}
-	button {
+	&-carousel {
+		height: 100%;
 
+		.nav {
+			transform: scaleZ(1000);
+		}
+
+		.navw {
+			transform: scaleZ(1000);
+		}
 	}
 }

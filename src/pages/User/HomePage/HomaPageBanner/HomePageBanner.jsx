@@ -37,12 +37,16 @@ function HomePageBanner(props) {
   return (
     <div className="banner">
       <Carousel
+        className="banner-carousel"
         index={carouselIndex}
         autoPlay={true}
         navButtonsAlwaysVisible={true}
         animation="fade"
         cycleNavigation={true}
         stopAutoPlayOnHover={true}
+        indicatorIconButtonProps={{
+          className: "banner-carousel-indicator"
+        }}
       >
         {items.map((item, i) => (
           <Item key={i} item={item} />
@@ -54,7 +58,7 @@ function HomePageBanner(props) {
 
 function Item(props) {
   return (
-    <Paper>
+    <Paper className="banner-carousel-item">
       <img src={props.item.img} alt="" />
       <h2>{props.item.name}</h2>
       <p>{props.item.description}</p>

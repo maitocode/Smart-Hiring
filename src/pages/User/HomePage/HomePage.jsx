@@ -9,7 +9,7 @@ import HomePageBanner from "./HomaPageBanner/HomePageBanner";
 function HomePage() {
   return (
     <div>
-      {/* <UserHeader /> */}
+      <UserHeader />
       <HomePageBanner />
       <HomePageHiring />
       <HomePageBenefits />
