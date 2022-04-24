@@ -16,8 +16,8 @@ function HomePageBanner(props) {
       img: Img1
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!",
+      name: "Random Name #1",
+      description: "Probably the most random thing you have ever seen!",
       img: Img2
     },
     {
@@ -27,25 +27,18 @@ function HomePageBanner(props) {
     }
   ];
 
-  const [carouselIndex, setCarouselIndex] = useState(0);
-
-  const handlePrev = (caroIndexSet) => {
-    console.log("prev click");
-    setCarouselIndex(caroIndexSet);
-  };
-
   return (
     <div className="banner">
       <Carousel
         className="banner-carousel"
-        index={carouselIndex}
-        autoPlay={true}
         navButtonsAlwaysVisible={true}
-        animation="fade"
         cycleNavigation={true}
         stopAutoPlayOnHover={true}
-        indicatorIconButtonProps={{
+        indicatorContainerProps={{
           className: "banner-carousel-indicator"
+        }}
+        navButtonsProps={{
+          className: "banner-carousel-nav-button"
         }}
       >
         {items.map((item, i) => (
@@ -60,9 +53,11 @@ function Item(props) {
   return (
     <Paper className="banner-carousel-item">
       <img src={props.item.img} alt="" />
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
-      <Button className="CheckButton">Check it out!</Button>
+      <div className="banner-carousel-item-description">
+        <h2>{props.item.name}</h2>
+        <p>{props.item.description}</p>
+        <Button className="CheckButton">Check it out!</Button>
+      </div>
     </Paper>
   );
 }

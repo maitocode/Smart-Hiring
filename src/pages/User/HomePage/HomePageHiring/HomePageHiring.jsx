@@ -1,7 +1,13 @@
 import React from "react";
+import JobHiringCarousel from "./../../../../components/JobsHiringCarousel/JobHiringCarousel";
 
-function HomePageHiring() {
-  return <div>HomePageHiring</div>;
+export default function HomePageHiring() {
+  return (
+    <div className="hiring">
+      <h1>we are hiring...</h1>
+      <h3>Choose and fill information we will contact you within a week</h3>
+      <JobHiringCarousel /> //
+    </div>
+  );
 }
-
-export default HomePageHiring;
+// PASS job to JobHiringCarousel to use this component

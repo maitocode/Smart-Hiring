@@ -1,20 +1,36 @@
 
 .banner {
+	position: relative;
 	display: block;
 	width: 100%;
 	height: 100vh;
-	position: relative;
-	// z-index: 1;
 	
 	&-carousel {
-		height: 100%;
+		height: 100vh;
+		width: 100%;
 
-		.nav {
-			transform: scaleZ(1000);
+		&-indicator {
+			position: absolute;
+			z-index: 1;
+			top: 90%;
 		}
 
-		.navw {
-			transform: scaleZ(1000);
+		&-nav-button {
+			transform: scale(1.4);
+			margin-inline: 50px !important;
+		}
+
+		&-item {
+			&-description {
+				position: relative;
+				width: 500px;
+				height: 500px;
+			
+  				bottom: 500px;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 	}
+	// &-carousel-nav-button {
 }
