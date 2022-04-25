@@ -22,7 +22,7 @@ export default function JobHiringCarousel({ jobs }) {
         // indicators={false}
         navButtonsAlwaysVisible={true}
         cycleNavigation={false}
-        // navButtonsProps={{ className: "hihi" }}
+        navButtonsProps={{ className: "hihi" }}
       >
         {carouselListItems.map((jobsItem, index) => {
           <CarouselItem jobs={jobsItem} key={index} />;

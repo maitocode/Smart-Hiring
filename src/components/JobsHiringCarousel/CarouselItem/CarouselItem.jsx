@@ -1,10 +1,9 @@
 import React from "react";
 import { Paper } from "@mui/material";
 import JobCard from "../JobCard/JobCard";
+import "./CarouselItem.scss";
 
 export default function CarouselItem({ jobItems }) {
-  console.log("carouselItem");
-  console.log(jobItems);
   return (
     <Paper className="jobs-carousel-item">
       {/* {jobItems.map((job, index) => {
@@ -19,8 +18,7 @@ export default function CarouselItem({ jobItems }) {
           />
         );
     })} */}
-      <h1>hihi</h1>
-      <h2>hehe</h2>
+      hehe
     </Paper>
   );
 }

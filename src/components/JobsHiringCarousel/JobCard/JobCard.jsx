@@ -3,26 +3,41 @@ import PropTypes from "prop-types";
 import "./JobCard.scss";
 import { Avatar } from "@mui/material";
 
-export default function JobCard({ img, jobName, salary, needed, skills }) {
+export default function JobCard({ jobInfo }) {
   return (
     <div className="job-card">
       <div className="job-card-header">
-        <Avatar src={img} alt="" />
-        <h2>{jobName}</h2>
+        <Avatar
+          sx={{ width: 70, height: 70, margin: "10px" }}
+          src={jobInfo.img}
+          alt=""
+        />
+        <h2 className="job-card-header-name">{jobInfo.jobName}</h2>
       </div>
-      <div className="salary">
-        $ {salary.from} upto {salary.to}
+      <div className="job-card-body">
+        <h3 className="job-card-salary">
+          $ {jobInfo.salary.from} upto {jobInfo.salary.to}
+        </h3>
+        <h3 className="job-card-needed">Needed: {jobInfo.needed}</h3>
+        <h3 className="job-card-skills">Skills: {jobInfo.skills.join()}</h3>
       </div>
-      <h3>Needed: {needed}</h3>
-      <h3>Skills: {skills.join()}</h3>
+      <div className="job-card-footer">
+        <h4 className="job-card-footer-note">{jobInfo.note}</h4>
+      </div>
     </div>
   );
 }
 
 JobCard.propTypes = {
-  img: PropTypes.object,
-  jobName: PropTypes.string,
-  salary: PropTypes.object,
-  needed: PropTypes.number,
-  skills: PropTypes.array
+  jobInfo: PropTypes.shape({
+    img: PropTypes.string,
+    jobName: PropTypes.string,
+    salary: PropTypes.shape({
+      from: PropTypes.number,
+      to: PropTypes.number
+    }),
+    needed: PropTypes.number,
+    skills: PropTypes.array,
+    note: PropTypes.string
+  }).isRequired
 };
