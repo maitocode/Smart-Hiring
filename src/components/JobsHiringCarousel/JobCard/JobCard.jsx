@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./JobCard.scss";
+import { Avatar } from "@mui/material";
 
-function JobCard({ img, jobName, salary, needed, skills }) {
+export default function JobCard({ img, jobName, salary, needed, skills }) {
   return (
     <div className="job-card">
-      <img src={img} alt="" />
-      <h2>{jobName}</h2>
+      <div className="job-card-header">
+        <Avatar src={img} alt="" />
+        <h2>{jobName}</h2>
+      </div>
       <div className="salary">
         $ {salary.from} upto {salary.to}
       </div>
@@ -16,11 +20,9 @@ function JobCard({ img, jobName, salary, needed, skills }) {
 }
 
 JobCard.propTypes = {
-  img: PropTypes.string,
+  img: PropTypes.object,
   jobName: PropTypes.string,
   salary: PropTypes.object,
   needed: PropTypes.number,
   skills: PropTypes.array
 };
-
-export default JobCard;

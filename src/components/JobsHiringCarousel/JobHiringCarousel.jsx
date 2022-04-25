@@ -1,21 +1,28 @@
 import React from "react";
-import { Carousel } from "react-material-ui-carousel";
+import Carousel from "react-material-ui-carousel";
 import PropTypes from "prop-types";
-import JobCard from "./JobCard/JobCard";
+import CarouselItem from "./CarouselItem/CarouselItem.jsx";
+import { Paper } from "@mui/material";
+import "./JobHiringCarousel.scss";
 
-const amountJobInItem = 6;
-function JobHiringCarousel({ jobs }) {
+JobHiringCarousel.propTypes = {
+  jobs: PropTypes.array.isRequired
+};
+
+export default function JobHiringCarousel({ jobs }) {
+  const amountJobInItem = 6;
   const carouselListItems = chunk(jobs, amountJobInItem);
+  console.log(carouselListItems);
 
   return (
     <div className="hiring-carousel-jobs">
       <Carousel
         className="carousel-jobs"
         autoPlay={false}
-        indicators={false}
+        // indicators={false}
         navButtonsAlwaysVisible={true}
         cycleNavigation={false}
-        navButtonsProps={{ className: "hihi" }}
+        // navButtonsProps={{ className: "hihi" }}
       >
         {carouselListItems.map((jobsItem, index) => {
           <CarouselItem jobs={jobsItem} key={index} />;
@@ -25,28 +32,7 @@ function JobHiringCarousel({ jobs }) {
   );
 }
 
-JobHiringCarousel.propTypes = { jobs: PropTypes.array };
-
-function CarouselItem({ jobItems }) {
-  return (
-    <div className="jobs-carousel-item">
-      {jobItems.map((job, index) => {
-        return (
-          <JobCard
-            img={job.img}
-            jobName={job.jobName}
-            salary={job.salary}
-            needed={job.needed}
-            skill={job.skills}
-            key={index}
-          />
-        );
-      })}
-    </div>
-  );
-}
-
-function chunk(items, size) {
+export function chunk(items, size) {
   const chunks = [];
   items = [].concat(...items);
 
@@ -56,9 +42,3 @@ function chunk(items, size) {
 
   return chunks;
 }
-
-JobHiringCarousel.propTypes = {
-  jobs: PropTypes.array.isRequired
-};
-
-export default JobHiringCarousel;

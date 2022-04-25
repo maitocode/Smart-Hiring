@@ -1,0 +1,14 @@
+.job-card {
+    margin: 20px;
+    padding: 18px;
+    width: 230px;
+    height: 300px;
+    border: 2px solid rgb(189, 181, 181);
+    border-radius: 7px;
+    
+    &-header {
+        display: flex;
+        
+        flex: 2 1 auto;
+    }
+}
