@@ -3,22 +3,24 @@ import { Paper } from "@mui/material";
 import JobCard from "../JobCard/JobCard";
 import "./CarouselItem.scss";
 
+import PropTypes from "prop-types";
+
 export default function CarouselItem({ jobItems }) {
+  console.log(jobItems);
   return (
     <Paper className="jobs-carousel-item">
-      {/* {jobItems.map((job, index) => {
-        return (
-          <JobCard
-            img={job.img}
-            jobName={job.jobName}
-            salary={job.salary}
-            needed={job.needed}
-            skill={job.skills}
-            key={index}
-          />
-        );
-    })} */}
-      hehe
+      {jobItems.map((job, index) => (
+        <JobCard jobInfo={job} key={index} />
+      ))}
     </Paper>
   );
 }
+
+CarouselItem.propTypes = {
+  jobItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string,
+      jobName: PropTypes.string
+    })
+  )
+};
