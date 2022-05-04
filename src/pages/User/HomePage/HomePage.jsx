@@ -10,13 +10,13 @@ import ChatBox from "./../../../components/ChatBox/ChatBox";
 function HomePage() {
   return (
     <div>
-      {/* <UserHeader />
-      <ChatBox /> */}
-      {/* <HomePageBanner /> */}
+      <UserHeader />
+      <ChatBox />
+      <HomePageBanner />
       <HomePageHiring />
-      {/* <HomePageBenefits />
+      <HomePageBenefits />
       <HomePageAboutUs />
-      <HomePageBottom /> */}
+      {/* <HomePageBottom /> */}
     </div>
   );
 }

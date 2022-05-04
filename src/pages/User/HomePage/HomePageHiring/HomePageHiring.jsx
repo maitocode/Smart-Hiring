@@ -160,11 +160,8 @@ export default function HomePageHiring() {
   return (
     <div className="hiring">
       <h1>we are hiring...</h1>
-      <h3>Choose and fill information we will contact you within a week</h3>
-      <div className="hiring-carousel">
-        <JobHiringCarousel jobs={jobs} />
-      </div>
+      <h2>Choose and fill information we will contact you within a week</h2>
+      <JobHiringCarousel jobs={jobs} />
     </div>
   );
 }
-// PASS job to JobHiringCarousel to use this component

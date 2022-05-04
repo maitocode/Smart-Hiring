@@ -1,0 +1,24 @@
+.page-benefits {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+
+    h1 {
+        margin: 50px 0 20px;
+        text-align: center;
+        color: aqua;
+    }
+    h3 {
+        text-align: center;
+        margin: 0 400px 20px;
+    }
+    // margin: 50px 100px;
+
+    .benefit-group-card {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 120px;
+    }
+}

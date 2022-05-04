@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 export default function CarouselItem({ jobItems }) {
   console.log(jobItems);
   return (
-    <Paper className="jobs-carousel-item">
+    <Paper className="jobs-carousel-item" elevation="0">
       {jobItems.map((job, index) => (
         <JobCard jobInfo={job} key={index} />
       ))}
