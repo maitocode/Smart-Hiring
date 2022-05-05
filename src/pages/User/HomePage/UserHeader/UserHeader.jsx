@@ -21,7 +21,7 @@ function UserHeader() {
         className="header-search"
         value={searchValue}
         onChange={(newValue) => setSearchValue(newValue)}
-        onRequestSearch={() => doSomethingWith(this.state.value)}
+        onRequestSearch={() => doSomethingWith(searchValue)}
       />
       <div className="header-quick-access">
         <ul>
