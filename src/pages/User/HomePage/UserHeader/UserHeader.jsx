@@ -22,6 +22,7 @@ function UserHeader() {
         value={searchValue}
         onChange={(newValue) => setSearchValue(newValue)}
         onRequestSearch={() => doSomethingWith(searchValue)}
+        placeholder="Search for Job"
       />
       <div className="header-quick-access">
         <ul>
@@ -38,14 +39,6 @@ function UserHeader() {
             <a href="">Contact</a>
           </li>
         </ul>
-      </div>
-      <div className="header-auth">
-        <div className="header-auth-login">
-          <LoginIcon />
-        </div>
-        <div className="header-auth-register">
-          <AppRegistrationIcon />
-        </div>
       </div>
     </section>
   );

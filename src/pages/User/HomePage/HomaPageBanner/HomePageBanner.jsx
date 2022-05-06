@@ -2,10 +2,9 @@ import { React, useState } from "react";
 import "./HomePageBanner.scss";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
-import Img1 from "../../../../assets/images/slider1.jpeg";
-import Img2 from "../../../../assets/images/slider2.jpg";
-import Img3 from "../../../../assets/images/slider3.jpeg";
-import Img4 from "../../../../assets/images/slider4.jpg";
+import Img1 from "../../../../assets/images/banner1.jpg";
+import Img2 from "../../../../assets/images/banner2.jpg";
+import Img3 from "../../../../assets/images/banner3.jpeg";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 
 function HomePageBanner(props) {
