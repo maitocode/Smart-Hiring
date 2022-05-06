@@ -11,24 +11,25 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 function HomePageBanner(props) {
   var items = [
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
       img: Img1
     },
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
       img: Img2
     },
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
       img: Img3
     }
   ];
 
   return (
     <div className="banner">
+      <div className="banner-quote">
+        <div className="banner-quote-1">
+          We’re proud to work with clients across the globe
+        </div>
+        <div className="banner-quote-2">OUTCOME DRIVEN </div>
+        <div className="banner-quote-2">SOFTWARE</div>
+      </div>
       <Carousel
         className="banner-carousel"
         navButtonsAlwaysVisible={true}
@@ -53,11 +54,6 @@ function Item(props) {
   return (
     <Paper className="banner-carousel-item">
       <img src={props.item.img} alt="" />
-      <div className="banner-carousel-item-description">
-        <h2>{props.item.name}</h2>
-        <p>{props.item.description}</p>
-        <Button className="CheckButton">Check it out!</Button>
-      </div>
     </Paper>
   );
 }

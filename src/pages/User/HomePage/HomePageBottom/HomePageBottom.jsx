@@ -6,10 +6,17 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 function HomePageBottom() {
   return (
     <div className="footer">
-      <h1>SmartHiring</h1>
-      <div className="footer-link">
-        <FacebookIcon />
-        <LinkedInIcon />
+      <div>
+        <div className="footer-logo">
+          <span>SmartHiring</span>
+          <div className="footer-logo-link">
+            <FacebookIcon fontSize="large" />
+            <LinkedInIcon fontSize="large" />
+          </div>
+        </div>
+        <div className="footer-quote">
+          Leading Software Outsourcing Company in Vietnam. All Rights Reserved.
+        </div>
       </div>
     </div>
   );
