@@ -16,7 +16,7 @@ function HomePage() {
       <HomePageHiring />
       <HomePageBenefits />
       <HomePageAboutUs />
-      {/* <HomePageBottom /> */}
+      <HomePageBottom />
     </div>
   );
 }

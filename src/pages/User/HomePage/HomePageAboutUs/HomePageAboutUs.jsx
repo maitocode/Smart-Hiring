@@ -1,34 +1,56 @@
 import React from "react";
 import "./HomePageAboutUs.scss";
+import MobileApp from "../../../../assets/images/Services/MobileApp.svg";
+import BackEnd from "../../../../assets/images/Services/Backend.svg";
+import IoT from "../../../../assets/images/Services/IoT.svg";
+import MobileGame from "../../../../assets/images/Services/MobileGame.svg";
+import QA from "../../../../assets/images/Services/QA.svg";
+import WebApp from "../../../../assets/images/Services/WebApp.svg";
+import Android from "../../../../assets/images/Technologys/Android.svg";
+import Angular from "../../../../assets/images/Technologys/Angular.svg";
+import IOS from "../../../../assets/images/Technologys/IOS.svg";
+import Java from "../../../../assets/images/Technologys/Java.svg";
+import NodeJs from "../../../../assets/images/Technologys/NodeJs.svg";
+import PHP from "../../../../assets/images/Technologys/PHP.svg";
+import Python from "../../../../assets/images/Technologys/Python.svg";
+import REACT from "../../../../assets/images/Technologys/React.svg";
+import VueJs from "../../../../assets/images/Technologys/VueJs.svg";
+import Location from "../../../../assets/icons/location.svg";
 
 function HomePageAboutUs() {
-  const AboutUsContent = [
+  const AboutUsData = [
     {
       name: "Service",
       detail: [
         {
-          img: "",
-          name: ""
+          id: 0,
+          img: MobileApp,
+          name: "Mobile App Development"
         },
         {
-          img: "",
-          name: ""
+          id: 1,
+          img: BackEnd,
+          name: "Backend Development"
         },
         {
-          img: "",
-          name: ""
+          id: 2,
+          img: IoT,
+          name: "IoT"
         },
         {
-          img: "",
-          name: ""
+          id: 3,
+          img: MobileGame,
+          name: "Mobile Game Development"
         },
         {
-          img: "",
-          name: ""
+          id: 4,
+          img: QA,
+          name: "QA & Testing"
         },
         {
-          img: "",
-          name: ""
+          id: 5,
+          img: WebApp,
+          name: "Web App Development"
         }
       ]
     },
@@ -36,28 +58,49 @@ function HomePageAboutUs() {
       name: "Technologys",
       detail: [
         {
-          img: "",
-          name: ""
+          id: 6,
+          img: Android,
+          name: "Android"
         },
         {
-          img: "",
-          name: ""
+          id: 7,
+          img: Angular,
+          name: "Angular"
         },
         {
-          img: "",
-          name: ""
+          id: 8,
+          img: IOS,
+          name: "IOS"
         },
         {
-          img: "",
-          name: ""
+          id: 9,
+          img: Java,
+          name: "Java"
         },
         {
-          img: "",
-          name: ""
+          id: 10,
+          img: NodeJs,
+          name: "NodeJs"
         },
         {
-          img: "",
-          name: ""
+          id: 11,
+          img: PHP,
+          name: "PHP"
+        },
+        {
+          id: 12,
+          img: Python,
+          name: "Python"
+        },
+        {
+          id: 13,
+          img: REACT,
+          name: "REACT"
+        },
+        {
+          id: 14,
+          img: VueJs,
+          name: "VueJs"
         }
       ]
     },
@@ -65,32 +108,27 @@ function HomePageAboutUs() {
       name: "Division",
       detail: [
         {
-          img: "",
-          name: ""
+          id: 15,
+          img: Location,
+          name: "Da nang"
         },
         {
-          img: "",
-          name: ""
+          id: 16,
+          img: Location,
+          name: "Ho Chi Minh"
         },
         {
-          img: "",
-          name: ""
-        },
-        {
-          img: "",
-          name: ""
-        },
-        {
-          img: "",
-          name: ""
-        },
-        {
-          img: "",
-          name: ""
+          id: 17,
+          img: Location,
+          name: "Ha Noi"
         }
       ]
     }
   ];
+
+  const Services = AboutUsData[0];
+  const Technologys = AboutUsData[1];
+  const Divisions = AboutUsData[2];
 
   return (
     <div className="page-about-us">
@@ -100,7 +138,41 @@ function HomePageAboutUs() {
         products and services to help them achieve their aspirations{" "}
       </h2>
 
-      <div className="about-group-cards"></div>
+      <div className="about-group-cards">
+        <div className="about-group-cards-services">
+          <div className="about-card-name">{Services.name}</div>
+          <div className="about-card-details">
+            {Services.detail.map((item) => (
+              <div className="services-item" key={item.id}>
+                <img src={item.img} alt="" />
+                <div className="services-item-name">{item.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="about-group-cards-technologys">
+          <div className="about-card-name">{Technologys.name}</div>
+          <div className="about-card-details">
+            {Technologys.detail.map((item) => (
+              <div className="technologys-item" key={item.id}>
+                <img src={item.img} alt="" />
+                <div className="technologys-item-name">{item.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="about-group-cards-divisions">
+          <div className="about-card-name">{Divisions.name}</div>
+          <div className="about-card-details">
+            {Divisions.detail.map((item) => (
+              <div className="divisions-item" key={item.id}>
+                <img src={item.img} alt="" />
+                <div className="divisions-item-name">{item.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
