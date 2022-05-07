@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getDatabase } from "firebase/database";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCmut0pfJriZPVOeofhf9dUgdGeXkxP63Q",
@@ -13,8 +13,19 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
-const db = getFirestore();
-const auth = getAuth();
+const app = initializeApp(firebaseConfig);
 
-export { auth, db };
+const auth = getAuth();
+const createFirebaseAccount = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+        })
+        .catch((error) => {
+            console.log(error.message);
+        });
+}
+const database = getDatabase(app);
+
+export { app, auth, createFirebaseAccount, database };
