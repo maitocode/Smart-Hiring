@@ -4,7 +4,6 @@ import "./JobCard.scss";
 import { Avatar } from "@mui/material";
 
 export default function JobCard({ jobInfo }) {
-  console.log("hihi", jobInfo);
   return (
     <div className="job-card">
       <div className="job-card-header">

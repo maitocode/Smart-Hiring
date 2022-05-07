@@ -12,7 +12,6 @@ JobHiringCarousel.propTypes = {
 export default function JobHiringCarousel({ jobs }) {
   const amountJobInItem = 6;
   const carouselListItems = chunk(jobs, amountJobInItem);
-  console.log(carouselListItems);
 
   return (
     <div className="hiring-carousel-jobs">

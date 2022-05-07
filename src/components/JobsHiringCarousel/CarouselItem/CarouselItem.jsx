@@ -6,9 +6,8 @@ import "./CarouselItem.scss";
 import PropTypes from "prop-types";
 
 export default function CarouselItem({ jobItems }) {
-  console.log(jobItems);
   return (
-    <Paper className="jobs-carousel-item" elevation="0">
+    <Paper className="jobs-carousel-item" elevation={0}>
       {jobItems.map((job, index) => (
         <JobCard jobInfo={job} key={index} />
       ))}
