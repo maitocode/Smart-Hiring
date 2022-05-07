@@ -6,8 +6,13 @@ function ChatBox() {
 
   const [hide, setHide] = useState(true);
 
-  const openChatBox = () => {
+  const openCloseChatBox = () => {
     setHide(!hide);
+    const LogoChat = document.getElementById("chat-box-minimize-logo");
+    const IntroChat = document.getElementById("chat-box-minimize-intro");
+    LogoChat.style.display= hide? "none" : "block";
+    IntroChat.style.display= "none";
+    console.log("onclick")
   }
 
   useEffect(() => {
@@ -15,10 +20,12 @@ function ChatBox() {
   })
   
   return (
-    <div className="chat-box" onClick={() => openChatBox()}>
-      <img src="https://cdn-icons-png.flaticon.com/512/52/52482.png" alt="" />
-      <h3>Hi, let ask me any question</h3>
-      <ChatEngine isHide={hide}/>
+    <div className="chat-box" onClick={() => openCloseChatBox()}>
+      <div className="chat-box-minimize">
+        <img id="chat-box-minimize-logo" src="https://cdn-icons-png.flaticon.com/512/52/52482.png" alt="" />
+        <h3 id="chat-box-minimize-intro">Hi, let ask me any question</h3>
+      </div>
+      <ChatEngine isHide={hide} onHidden={openCloseChatBox}/>
     </div>
   );
 }
