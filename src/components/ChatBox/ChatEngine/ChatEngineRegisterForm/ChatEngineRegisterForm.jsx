@@ -1,77 +1,65 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
+function ChatEngineRegisterForm() {
 
-function ChatEngineRegisterForm(props) {
-
-    const [values, setValues] = useState({});
-
-    const handleChange = event => {
-        setValues(prevValues => ({
-          ...prevValues,
-          [event.target.name]: event.target.value
-        }));
-    }
-
-    const validate = values => {
-    const errors = {};
-    if (!values.email) {
-        errors.email = 'Required';
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Invalid email address';
-    }
-    
-    return errors;
-    };
-
+    const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
     const formik = useFormik({
         initialValues: {
-            email: '',
-            phoneNumber: '',
-            secret: ''
+          email: '',
+          phone: '',
+          secret: ''
         },
-        validate,
+        validationSchema: Yup.object({
+          email: Yup.string().email('Invalid email address').required('Required'),
+          phone: Yup.string().matches(phoneRegExp, 'Phone number is not valid'),
+          secret: Yup.string().min(6, 'Must be 6 characters or more')
+        }),
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+          alert("submit ne", values);
         },
     });
 
-   
-
   return (
-    // <div className="chat-register-form">
-    //     <h2>Fill the following to continue</h2>
-    //     <input type="text" name="" id="" />
-    // </div>
     <form onSubmit={formik.handleSubmit} className="chat-register-form">
         <h2>Fill the following to continue</h2>
     <label htmlFor="email">Email Address</label>
     <input
-      id="chat-engine-rgf-email"
-      name="chat-engine-rgf-email"
+      id="email"
+      name="email"
       type="email"
-      onChange={handleChange}
+      onChange={formik.handleChange}
       value={formik.values.email}
     />
 
-    {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
-    ) : null}
+      {formik.touched.email && formik.errors.email ? (
+          <div>{formik.errors.email}</div>
+      ) : null}
 
+    <label htmlFor="phone">Phone numbers</label>
     <input
-      id="chat-engine-rgf-phone"
-      name="chat-engine-rgf-phone"
-      type="number"
-      onChange={handleChange}
+      id="phone"
+      name="phone"
+      type="phone"
+      onChange={formik.handleChange}
       value={formik.values.phone}
     />
+      {formik.touched.phone && formik.errors.phone ? (
+              <div>{formik.errors.phone}</div>
+          ) : null}
+
+    <label htmlFor="secret">Secret</label>
     <input
-      id="chat-engine-rgf-secret"
-      name="chat-engine-rgf-secret"
+      id="secret"
+      name="secret"
       type="password"
-      onChange={handleChange}
+      onChange={formik.handleChange}
       value={formik.values.secret}
     />
+        {formik.touched.secret && formik.errors.secret ? (
+        <div>{formik.errors.secret}</div>
+    ) : null}
     <button type="submit">Submit</button>
   </form>
   )

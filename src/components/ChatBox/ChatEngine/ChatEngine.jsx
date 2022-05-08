@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import "./ChatEngine.scss";
 import ChatEngineHeader from './ChatEngineHeader/ChatEngineHeader';
@@ -6,7 +6,8 @@ import ChatEngineRegisterForm from './ChatEngineRegisterForm/ChatEngineRegisterF
 
 function ChatEngine({isHide, onHidden}) {
 
-  const email = localStorage.getItem("email");
+  const [email, setEmail] = useState(localStorage.getItem("email"));
+
 
   useEffect(() => {
     console.log("ChatEngine", isHide);
@@ -19,7 +20,7 @@ function ChatEngine({isHide, onHidden}) {
       style={{display: isHide ? "none" : "block"}}
     >
       {/* move onClick to ChatEngineHeader */}
-        <div onClick={() => onHidden()}><ChatEngineHeader /></div>
+        <ChatEngineHeader onHide={onHidden}/>
         {/* {email && <ChatEngineRegisterForm />} */}
         <ChatEngineRegisterForm />
         {/* chatframe */}

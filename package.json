@@ -48,7 +48,7 @@
     "styled-components": "^5.3.5",
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.11",
-    "yup": "^0.32.9"
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",

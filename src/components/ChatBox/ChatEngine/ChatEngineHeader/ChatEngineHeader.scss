@@ -13,7 +13,8 @@ $closeButton_width: 23px;
         left: 0;
         display: inline-block;
         width: $closeButton_width !important;
-        align-items: center;    
+        align-items: center;
+        // background-color: aqua;
     
         &:hover {
             color: rgb(235, 79, 79);
