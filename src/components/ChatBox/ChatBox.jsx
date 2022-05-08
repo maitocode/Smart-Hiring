@@ -20,8 +20,8 @@ function ChatBox() {
   })
   
   return (
-    <div className="chat-box" onClick={() => openCloseChatBox()}>
-      <div className="chat-box-minimize">
+    <div className="chat-box">
+      <div className="chat-box-minimize" onClick={() => openCloseChatBox()}>
         <img id="chat-box-minimize-logo" src="https://cdn-icons-png.flaticon.com/512/52/52482.png" alt="" />
         <h3 id="chat-box-minimize-intro">Hi, let ask me any question</h3>
       </div>
