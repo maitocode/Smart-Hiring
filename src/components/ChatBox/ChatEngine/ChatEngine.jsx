@@ -9,16 +9,14 @@ function ChatEngine({isHide, onHidden}) {
     console.log("ChatEngine", isHide);
   }, [isHide])
 
-  const handeOnHiddenCLick = () => {
-    console.log("hihi")
-  }
 
   return (
     <div 
       className="chat-engine"
       style={{display: isHide ? "none" : "block"}}
     >
-      <span onClick={() => onHidden()}><ChatEngineHeader /></span>
+        <div onClick={() => onHidden()}><ChatEngineHeader /></div>
+        {/* form  */}
     </div>
   )
 }
@@ -28,4 +26,4 @@ ChatEngine.propTypes = {
   onHidden: PropTypes.func
 }
 
-export default ChatEngine
+export default ChatEngine;

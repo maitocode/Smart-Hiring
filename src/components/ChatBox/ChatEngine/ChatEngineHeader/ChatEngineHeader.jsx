@@ -5,10 +5,15 @@ import "./ChatEngineHeader.scss"
 
 function ChatEngineHeader(props) {
   return (
-    <div className='chat-engine-header'><DoNotDisturbOnIcon fontSize='large' className="chat-engine-header-close-button"/></div>
+    <div className='chat-engine-header'>
+      <DoNotDisturbOnIcon fontSize='large' className="chat-engine-header-close-button"/>
+      <div className="chat-engine-header-title">Smart-Hiring Chatbox</div>
+    </div>
   )
 }
 
-ChatEngineHeader.propTypes = {}
+ChatEngineHeader.propTypes = {
+  
+}
 
 export default ChatEngineHeader
