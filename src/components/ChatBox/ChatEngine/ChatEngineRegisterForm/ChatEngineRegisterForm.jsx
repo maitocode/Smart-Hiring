@@ -17,7 +17,8 @@ function ChatEngineRegisterForm() {
           secret: Yup.string().min(6, 'Must be 6 characters or more')
         }),
         onSubmit: values => {
-          alert("submit ne", values);
+          // check secret ? loginWithSecret.getHistory : (loginDefault ? not get history : register)
+          // connect with HR to chat
         },
     });
 

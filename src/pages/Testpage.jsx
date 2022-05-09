@@ -1,28 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
+import {getDocs } from 'firebase/firestore';
+import { signInWithEmailAndAutoPassword, colRef, sendMessage, getMessages } from "core/services/Firebase/FirebaseConfig.js";
+
+
 function Testpage() {
 
-const auth = getAuth();
+    const [messages, setMessages] = useState([{
+        message: 'hihi',
+        id: 10000
+    }]);
 
-createUserWithEmailAndPassword(auth, "hihdi@yopmail.com", "1234567")
-    .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
+    useEffect(() => {
+        signInWithEmailAndAutoPassword("hihihi@yopmail.com");
+        // sendMessage("vcl");
+        getMessages();
     })
-    .catch((error) => {
-        console.log(error.message);
-    });
 
-  // const db = database;
-
-  // set(ref(db, 'users/' + 0), {
-  //   username: "hihi",
-  //   email: "hihi@hihi.com",
-  //   profile_picture : "imageUrl"
-  // });
-  return <h1>HIHI</h1>;
+  return <div>
+      
+  </div>;
 }
 
 export default Testpage;
