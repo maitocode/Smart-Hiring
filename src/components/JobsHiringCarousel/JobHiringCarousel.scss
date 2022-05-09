@@ -1,0 +1,20 @@
+.hiring-carousel-jobs {
+    position: relative;
+    // background-color: yellow;
+
+    .carousel-jobs {
+        background-color: #FAF7F7 !important;
+        // justify-items: center;
+        &-button {
+            margin: auto 250px;
+            transform: scale(1.2);
+            background-color:blue;
+        }
+
+        &-indicator {
+            bottom: 0;
+            transform: scale(1.1);
+            margin: 60px 7px 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.benefit-card {
+    width: 30vw;
+    margin: 50px 40px 20px;
+    img {
+        width: auto;
+        display: inline-block;
+    }
+
+    h2 {
+        display: inline-block;
+        margin-left: 5rem;
+    }
+
+    &-body {
+        text-align: justify;
+        font-size: large;
+        // letter-spacing: 1px;
+    }
+}

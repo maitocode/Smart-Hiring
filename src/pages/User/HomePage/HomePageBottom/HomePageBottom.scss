@@ -1,0 +1,36 @@
+.footer {
+    background-color: black;
+    padding: 20px 0 3px;
+    display: flex;
+    justify-content: center;
+    
+    &-logo {
+        display: flex;
+        color: #7e7e7e;
+        font-size: 20px;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        font-weight: 500;
+
+        span {
+            position: relative;
+            &::after {
+                height: 100%;
+                width: 100%;
+                transform: scale(1.05);
+                content: '';
+                position: absolute;
+                background-color: white;
+                opacity: .5;
+                top: 0;
+                left: 0;
+                border-radius: 5px;
+            }
+        }
+    }
+    &-quote {
+        font-size: medium;
+        color: #7e7e7e;
+        letter-spacing: 2px;
+    }
+}

@@ -15,37 +15,32 @@ function UserHeader() {
   return (
     <section className="header">
       <div className="header-logo">
+        {/* <a href="#"> */}
         <img src={Logo} alt="" />
+        {/* </a> */}
       </div>
       <SearchBar
         className="header-search"
         value={searchValue}
         onChange={(newValue) => setSearchValue(newValue)}
-        onRequestSearch={() => doSomethingWith(this.state.value)}
+        onRequestSearch={() => doSomethingWith(searchValue)}
+        placeholder="Search for Job"
       />
       <div className="header-quick-access">
         <ul>
           <li>
-            <a href="">Jobs</a>{" "}
+            <a href="#hiring">Jobs</a>{" "}
           </li>
           <li>
-            <a href="">Benefits</a>
+            <a href="#benefit">Benefits</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#aboutUs">About</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
-      <div className="header-auth">
-        <div className="header-auth-login">
-          <LoginIcon />
-        </div>
-        <div className="header-auth-register">
-          <AppRegistrationIcon />
-        </div>
       </div>
     </section>
   );

@@ -13,6 +13,7 @@ import "plugins/react-i18n.js";
 import { routeConfig, RouteWithSubRoutes } from "router/config";
 import Error from "pages/Error/Error";
 import HomePage from "./pages/User/HomePage/HomePage";
+import Testpage from "./pages/Testpage";
 
 function App() {
   const { i18n } = useTranslation();
@@ -31,6 +32,7 @@ function App() {
         <Switch>
           <Route exact path="/not-found" component={Error} />
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/q" component={Testpage} />
           {routeConfig.map((route, i) => (
             <RouteWithSubRoutes key={i} {...route} />
           ))}
