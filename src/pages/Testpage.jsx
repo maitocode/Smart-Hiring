@@ -1,23 +1,27 @@
-import React from "react";
-import JobCard from "../components/JobsHiringCarousel/JobCard/JobCard";
-import Avatar from "../assets/images/avatar.jpeg";
-import CarouselItem from "./../components/JobsHiringCarousel/CarouselItem/CarouselItem";
+import React, { useEffect, useState } from "react";
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+import { getAuth } from "firebase/auth";
+import {getDocs } from 'firebase/firestore';
+import { signInWithEmailAndAutoPassword, colRef, sendMessage, getMessages } from "core/services/Firebase/FirebaseConfig.js";
+
 
 function Testpage() {
-  // const job = {
-  //   img: Avatar,
-  //   jobName: "jobA",
-  //   salary: {
-  //     from: 1000,
-  //     to: 2000
-  //   },
-  //   needed: 5,
-  //   skills: ["html", "css"],
-  //   note: "note ne"
-  // };
-  // return <JobCard jobInfo={job} />;
 
-  return <CarouselItem />;
+    const [messages, setMessages] = useState([{
+        message: 'hihi',
+        id: 10000
+    }]);
+
+    useEffect(() => {
+        signInWithEmailAndAutoPassword("hihihi@yopmail.com");
+        // sendMessage("vcl");
+        getMessages();
+    })
+
+  return <div>
+      
+  </div>;
 }
 
 export default Testpage;

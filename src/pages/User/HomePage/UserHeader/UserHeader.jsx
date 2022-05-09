@@ -15,7 +15,9 @@ function UserHeader() {
   return (
     <section className="header">
       <div className="header-logo">
+        {/* <a href="#"> */}
         <img src={Logo} alt="" />
+        {/* </a> */}
       </div>
       <SearchBar
         className="header-search"
@@ -27,16 +29,16 @@ function UserHeader() {
       <div className="header-quick-access">
         <ul>
           <li>
-            <a href="">Jobs</a>{" "}
+            <a href="#hiring">Jobs</a>{" "}
           </li>
           <li>
-            <a href="">Benefits</a>
+            <a href="#benefit">Benefits</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#aboutUs">About</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,35 @@
+$closeButton_width: 23px;
+
+.chat-engine-header {
+    position: relative;
+    height: 25px;
+    // background-color: red;
+    padding-bottom: 27x;
+    border-bottom: 1px solid rgb(206, 203, 203);
+
+    &-close-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: $closeButton_width !important;
+        align-items: center;
+        // background-color: aqua;
+    
+        &:hover {
+            color: rgb(235, 79, 79);
+            cursor: pointer;
+        }
+    }
+    &-title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - $closeButton_width);
+        display: inline-block;
+        white-space: 5px;
+        font-weight: 900;
+        font-size: 15px;
+        text-align: center;
+    }
+}

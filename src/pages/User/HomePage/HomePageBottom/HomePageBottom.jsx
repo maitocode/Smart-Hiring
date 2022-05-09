@@ -5,7 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function HomePageBottom() {
   return (
-    <div className="footer">
+    <div id="contact" className="footer">
       <div>
         <div className="footer-logo">
           <span>SmartHiring</span>

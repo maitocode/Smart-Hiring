@@ -20,7 +20,7 @@ import Location from "../../../../assets/icons/location.svg";
 function HomePageAboutUs() {
   const AboutUsData = [
     {
-      name: "Service",
+      name: "Services",
       detail: [
         {
           id: 0,
@@ -105,7 +105,7 @@ function HomePageAboutUs() {
       ]
     },
     {
-      name: "Division",
+      name: "Divisions",
       detail: [
         {
           id: 15,
@@ -131,7 +131,7 @@ function HomePageAboutUs() {
   const Divisions = AboutUsData[2];
 
   return (
-    <div className="page-about-us">
+    <div id="aboutUs" className="page-about-us">
       <h1>About Us</h1>
       <h2>
         Mission: Become essential to our customers by providing differentiated

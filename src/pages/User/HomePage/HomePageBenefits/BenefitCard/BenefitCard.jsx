@@ -2,7 +2,7 @@ import React from "react";
 import { PropTypes } from "prop-types";
 import "./BenefitCard.scss";
 
-BenefitCard.PropTypes = {
+BenefitCard.propTypes = {
   bnfc: PropTypes.shape({
     id: PropTypes.number,
     img: PropTypes.string,
@@ -13,7 +13,7 @@ BenefitCard.PropTypes = {
 
 function BenefitCard({ bnfc }) {
   return (
-    <div className="benefit-card">
+    <div id="benefit" className="benefit-card">
       <img src={bnfc.img} alt="" className="logo" />
       <h2 className="benefit-card-name">{bnfc.name}</h2>
       <div className="benefit-card-body">{bnfc.content}</div>

@@ -158,7 +158,7 @@ export default function HomePageHiring() {
   ];
 
   return (
-    <div className="hiring">
+    <div id="hiring" className="hiring">
       <h1>we are hiring...</h1>
       <h2>Choose and fill information we will contact you within a week</h2>
       <JobHiringCarousel jobs={jobs} />
